@@ -85,7 +85,7 @@ Maven installation
 ````
 yum install maven -y
 ````
-## $${\color{Red} \textbf{IAM ROLES creation} \ \}$$
+## $${\color{Red} \textbf{IAM Roles creation} \ \}$$
 
 <img width="753" height="453" alt="image" src="https://github.com/user-attachments/assets/8b3dae5d-dc52-4fe6-8754-ccd7c786b3f6" />
 
@@ -112,5 +112,24 @@ AmazonEC2ContainerRegistryReadOnly
 ````
 AmazonEKSWorkerNodePolicy
 ````
+Once Done name the Role and click Next
 
+<img width="1060" height="501" alt="image" src="https://github.com/user-attachments/assets/bc50fd7a-63b4-4227-b0ff-b9a07b932985" />
 
+## $${\color{Red} \textbf{EKS Cluster creation} \ \}$$
+Select EKS cluster and create a cluster
+
+<img width="700" height="215" alt="image" src="https://github.com/user-attachments/assets/4b103863-dc72-4041-b84c-eb683eb992c5" />
+
+Following Configs are to be used 
+
+<img width="937" height="1069" alt="image" src="https://github.com/user-attachments/assets/f5b67e74-5ab9-4141-8320-a87e759cd4be" />
+
+A security group has been created allowing all inbound and outbound rules for Project compatability purpouses 
+
+<img width="957" height="1078" alt="image" src="https://github.com/user-attachments/assets/0f57d542-3ef3-4a73-92ac-920b913f7c2e" />
+
+Click next and keep the rest as default and create the EKS cluster 
+> [!IMPORTANT]
+> Cluster Creation may take upto 15 minutes. 
+<img width="971" height="756" alt="image" src="https://github.com/user-attachments/assets/8bf3976b-5059-4475-be29-3490db530a3d" />
