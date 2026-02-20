@@ -110,7 +110,7 @@ AmazonEKS_CNI_Policy
 AmazonEC2ContainerRegistryReadOnly
 ````
 ````
-AmazonEKSWorkerNodePolicy 
+AmazonEKSWorkerNodePolicy
 ````
 
 
