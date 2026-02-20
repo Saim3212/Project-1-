@@ -55,6 +55,7 @@ Plugin installations are asked which is default sleected as recommended , choose
 
 Installations of docker and git is to be done now 
 
+
 Commands are below 
 ````
 yum install docker-io -y 
@@ -66,6 +67,50 @@ To initiate Docker
 ````
 systemctl start docker
 systemctl enable docker
+````
+Installation of kubectl can be done from the official Kuebrnetes website 
+https://kubernetes.io/docs/tasks/tools/install-kubectl-linux/
+The command in use is 
+````
+curl -LO "https://dl.k8s.io/release/$(curl -L -s https://dl.k8s.io/release/stable.txt)/bin/linux/amd64/kubectl"
+````
+Permission must be granted for kubectl
+along with moving the files for the kubectl to work 
+````
+chmod +x kubectl
+cp kubectl /usr/bin/k
+cp kubectl /usr/bin
+````
+Maven installation 
+````
+yum install maven -y
+````
+## $${\color{Red} \textbf{IAM ROLES creation} \ \}$$
+
+<img width="753" height="453" alt="image" src="https://github.com/user-attachments/assets/8b3dae5d-dc52-4fe6-8754-ccd7c786b3f6" />
+
+### $${\color{Orange} \textbf{MasterNode} \ \}$$
+
+Choose EKS and select Cluster 
+<img width="842" height="525" alt="image" src="https://github.com/user-attachments/assets/4f82f854-4edb-4932-a4d7-c76f39fe167c" />
+
+Click next and name it MasterNode and select Next
+
+### $${\color{Orange} \textbf{WorkerNode} \ \}$$
+
+<img width="820" height="465" alt="image" src="https://github.com/user-attachments/assets/4171cde6-556b-471b-b28f-b7120cf1f9f3" />
+
+Select EC2 at this stage and given below is the chosen permissions which must be allowed 
+> [!NOTE]
+> These are the Permissions that may be copied for easier navigation
+````
+AmazonEKS_CNI_Policy
+````
+````
+AmazonEC2ContainerRegistryReadOnly
+````
+````
+AmazonEKSWorkerNodePolicy 
 ````
 
 
