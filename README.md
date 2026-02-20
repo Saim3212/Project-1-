@@ -10,7 +10,8 @@ The Project focusses on the CICD tools where The developer would initiate to pus
 <img width="546" height="413" alt="image" src="https://github.com/user-attachments/assets/7345e07c-bdff-4d8d-8e9f-4258d2486015" />
 
 > Docker Services and what tools are to be used
-<img width="610" height="468" alt="image" src="https://github.com/user-attachments/assets/7a0d7f14-a375-435c-8467-acab525d38a6" />
+<img width="748" height="406" alt="image" src="https://github.com/user-attachments/assets/a5605e35-7d15-4b3f-90ad-4a4372437b49" />
+
 
 
 ## $${\color{Red} \textbf{Jenkins Server Initiation} \ \}$$
