@@ -26,9 +26,17 @@ Once the instance has been created , The following commands have been used as be
 
 ````
 sudo -i
+````
+````
 yum update -y
+````
+````
 yum upgrade -y
+````
+````
 yum install java-21* -y
+````
+````
 wget -O /etc/yum.repos.d/jenkins.repo \
     https://pkg.jenkins.io/rpm-stable/jenkins.repo
 ````
@@ -36,6 +44,8 @@ These commands install java 21 and install Jenkins repository so jenkins server 
 Once the Installation is complete 
 ````
 systemctl start jenkins
+````
+````
 systemctl enable jenkins
 ````
 Once the Jenkins has been initiated , we later go on to install Jenkins required dependencies and plugins 
@@ -58,7 +68,9 @@ Installations of docker and git is to be done now
 
 Commands are below 
 ````
-yum install docker-io -y 
+yum install docker-io -y
+````
+````
 yum install git -y 
 ````
 <img width="614" height="253" alt="image" src="https://github.com/user-attachments/assets/08cd8a96-b56f-4b0e-b378-455ccdf495e9" />
@@ -66,6 +78,8 @@ yum install git -y
 To initiate Docker 
 ````
 systemctl start docker
+````
+````
 systemctl enable docker
 ````
 Installation of kubectl can be done from the official Kuebrnetes website 
@@ -78,7 +92,11 @@ Permission must be granted for kubectl
 along with moving the files for the kubectl to work 
 ````
 chmod +x kubectl
+````
+````
 cp kubectl /usr/bin/k
+````
+````
 cp kubectl /usr/bin
 ````
 Maven installation 
