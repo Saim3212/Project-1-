@@ -23,3 +23,49 @@ An Amazon Linux Kernal 6 .12 AMI is chosen with an instance type of c7i flex lar
 <img width="580" height="504" alt="image" src="https://github.com/user-attachments/assets/81842744-688d-4309-b3fb-8e3a06c92fc9" />
 
 Once the instance has been created , The following commands have been used as below 
+
+````
+sudo -i
+yum update -y
+yum upgrade -y
+yum install java-21* -y
+wget -O /etc/yum.repos.d/jenkins.repo \
+    https://pkg.jenkins.io/rpm-stable/jenkins.repo
+````
+These commands install java 21 and install Jenkins repository so jenkins server may begin installation.
+Once the Installation is complete 
+````
+systemctl start jenkins
+systemctl enable jenkins
+````
+Once the Jenkins has been initiated , we later go on to install Jenkins required dependencies and plugins 
+which is done by pasting the instance Ip along with the prot 8080 
+The password is asked which can be acquired by pasting the command in the instance.
+````
+cat /var/lib/jenkins/secrets/initialAdminPassword
+````
+<img width="637" height="68" alt="image" src="https://github.com/user-attachments/assets/a061e6cf-a3c5-4dc1-87ca-0e57fdeb3066" />
+
+Plugin installations are asked which is default sleected as recommended , choose the first option and once installation is done
+<img width="1051" height="531" alt="image" src="https://github.com/user-attachments/assets/a862478d-2b80-4dc2-b9d0-13f616fdd0ca" />
+
+ Create the user as needed be 
+ 
+<img width="933" height="519" alt="image" src="https://github.com/user-attachments/assets/f3257e76-e8d7-4d19-b9bf-c1853a9a50ab" />
+
+Installations of docker and git is to be done now 
+
+Commands are below 
+````
+yum install docker-io -y 
+yum install git -y 
+````
+<img width="614" height="253" alt="image" src="https://github.com/user-attachments/assets/08cd8a96-b56f-4b0e-b378-455ccdf495e9" />
+
+To initiate Docker 
+````
+systemctl start docker
+systemctl enable docker
+````
+
+
