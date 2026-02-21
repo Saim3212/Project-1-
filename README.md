@@ -173,10 +173,7 @@ And Select the version you require
 
 <img width="602" height="218" alt="image" src="https://github.com/user-attachments/assets/0163f865-bfd3-4782-8fa1-bbf584365695" />
 
-Now swtich from Root User to Jenkins by command 
-````
-su - jenkins
-````
+
 To check if the bash permission is allowed or not we may use 
 ````
 grep  jenkins /etc/passwd
@@ -185,6 +182,29 @@ grep  jenkins /etc/passwd
 ````
 usermod -s /bin/bash jenkins
 ````
-<img width="635" height="147" alt="image" src="https://github.com/user-attachments/assets/0281c448-dd0c-4ed2-b6c9-39fc94d1627f" />
 
+Now switch from Root User to Jenkins by command 
+````
+su - jenkins
+````
+<img width="638" height="158" alt="image" src="https://github.com/user-attachments/assets/9e617759-7f8a-4de6-8b38-f151878f9f1d" />
 
+## $${\color{Red} \textbf{User Access Key Creation} \ \}$$`
+
+Navigate to IAM Users Section
+
+<img width="476" height="139" alt="image" src="https://github.com/user-attachments/assets/4d5bb78e-f93d-42dd-adc4-9a8389108257" />
+
+Once done ,create a new user by giving it a name and clicking on next and create a user 
+
+When the User has been created , click on the user and navigate to Security Credentials and clcik on Create access key 
+
+<img width="1029" height="520" alt="image" src="https://github.com/user-attachments/assets/fa866098-ba5f-4d1f-900e-a9f47dadf1ba" />
+
+select on CLI and click Next 
+
+<img width="782" height="511" alt="image" src="https://github.com/user-attachments/assets/2fc2572b-c09c-41b7-8ead-d9c9052d5472" />
+
+And create access Key , You may need to downlaod the csv file for future purpouses as this may be needed in ahed to log in as a user in the instance 
+
+<img width="774" height="409" alt="image" src="https://github.com/user-attachments/assets/0feda63a-e9b5-4409-af9f-91901ca25a61" />
