@@ -47,10 +47,10 @@ yum install jenkins -y
 These commands install java 21 and install Jenkins repository so jenkins server may begin installation.
 Once the Installation is complete 
 ````
-systemctl start jenkins
-````
-````
 systemctl enable jenkins
+````
+````
+systemctl start jenkins
 ````
 Once the Jenkins has been initiated , we later go on to install Jenkins required dependencies and plugins 
 which is done by pasting the instance Ip along with the prot 8080 
