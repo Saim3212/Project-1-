@@ -208,3 +208,38 @@ select on CLI and click Next
 And create access Key , You may need to downlaod the csv file for future purpouses as this may be needed in ahed to log in as a user in the instance 
 
 <img width="774" height="409" alt="image" src="https://github.com/user-attachments/assets/0feda63a-e9b5-4409-af9f-91901ca25a61" />
+
+### $${\color{Orange} \textbf{Logging in Instance as a user} \ \}$$
+
+Use the command to log in as the user 
+
+````
+aws login 
+````
+Include the Access keys as needed and set the location of the instance as well as the type of format needed
+
+<img width="640" height="125" alt="image" src="https://github.com/user-attachments/assets/13ec1b99-cf4e-4d10-909f-b8f91289427c" />
+
+## $${\color{Red} \textbf{EKS Continuation} \ \}$$
+> Since we left the Cluster creation as it takes within 15 minutes of creation , We diverted our progress towards others meanwhile it was created. This is a continuation once the status is active
+
+Click on the Compute option
+
+<img width="822" height="458" alt="image" src="https://github.com/user-attachments/assets/e89be1f3-9cab-480d-a2a1-ebc44bb28802" />
+
+Click on add node group option below and set the Name and click Next 
+
+<img width="807" height="434" alt="image" src="https://github.com/user-attachments/assets/569e3189-0328-4210-a2c8-aa25ea0a7dea" />
+
+leave the rest as default except maximum size as if autoscaling is needed it may have space to 10
+
+<img width="663" height="380" alt="image" src="https://github.com/user-attachments/assets/2c56ac86-eff4-4268-94fb-77c745c3a215" />
+
+Click Next form then on and review and create
+
+This may take additional 15 minutes until the status has turned into Active 
+
+<img width="831" height="308" alt="image" src="https://github.com/user-attachments/assets/1ee5bd99-fc35-46f9-bad5-3aba1e20d915" />
+
+
+
