@@ -81,10 +81,10 @@ yum install git -y
 
 To initiate Docker 
 ````
-systemctl start docker
-````
-````
 systemctl enable docker
+````
+````
+systemctl start docker
 ````
 Installation of kubectl can be done from the official Kuebrnetes website 
 https://kubernetes.io/docs/tasks/tools/install-kubectl-linux/
