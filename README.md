@@ -269,7 +269,8 @@ Now click on geenrate Pipeline Script
 And paste the link under the steps
 Include Maven and Docker build steps as well as Maven will create the var file for Docker build coverting it to an image 
 
-<img width="413" height="238" alt="image" src="https://github.com/user-attachments/assets/4a969825-1e2a-47b1-b9a6-8a3942d67984" />
+<img width="431" height="268" alt="image" src="https://github.com/user-attachments/assets/e58dc32d-a9ae-40f9-a0e2-311e86ff41d3" />
+
 
 > [!IMPORTANT]
 > You need to allow permissions for maven to work correctly
@@ -313,4 +314,13 @@ Now build the pipeline and click on stages
 You may see the Stage has gone successfull
 
 <img width="326" height="100" alt="image" src="https://github.com/user-attachments/assets/1a2e0d6c-fb0b-42a1-a1a6-4624cb55d574" />
+
+> Now When the Build has been complete you will find the image has been built and pulled in your instance 
+````
+docker images 
+````
+In your EC2 instance check Docker Images and you will find your image there depending on the build number
+````
+docker images 
+````
 
