@@ -41,6 +41,9 @@ yum install java-21* -y
 wget -O /etc/yum.repos.d/jenkins.repo \
     https://pkg.jenkins.io/rpm-stable/jenkins.repo
 ````
+````
+yum install jenkins -y
+````
 These commands install java 21 and install Jenkins repository so jenkins server may begin installation.
 Once the Installation is complete 
 ````
