@@ -155,3 +155,36 @@ Click next and keep the rest as default and create the EKS cluster
 > [!IMPORTANT]
 > Cluster Creation may take upto 15 minutes. 
 <img width="971" height="756" alt="image" src="https://github.com/user-attachments/assets/8bf3976b-5059-4475-be29-3490db530a3d" />
+
+## $${\color{Red} \textbf{Java shifting Versioins } \ \}$$
+
+> Installations of different versions may be needed depending on the cpmpatability of the service
+
+Installation of Java 11 
+````
+yum install java-11* -y
+````
+> [!TIP]
+> Command for changing versions
+````
+update-alternatives --config java
+````
+And Select the version you require 
+
+<img width="602" height="218" alt="image" src="https://github.com/user-attachments/assets/0163f865-bfd3-4782-8fa1-bbf584365695" />
+
+Now swtich from Root User to Jenkins by command 
+````
+su - jenkins
+````
+To check if the bash permission is allowed or not we may use 
+````
+grep  jenkins /etc/passwd
+````
+ > To give the permission 
+````
+usermod -s /bin/bash jenkins
+````
+<img width="635" height="147" alt="image" src="https://github.com/user-attachments/assets/0281c448-dd0c-4ed2-b6c9-39fc94d1627f" />
+
+
