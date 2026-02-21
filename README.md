@@ -241,5 +241,57 @@ This may take additional 15 minutes until the status has turned into Active
 
 <img width="831" height="308" alt="image" src="https://github.com/user-attachments/assets/1ee5bd99-fc35-46f9-bad5-3aba1e20d915" />
 
+Once the Nodes are Active you will notice additonal Instances are now Active 
 
+<img width="678" height="178" alt="image" src="https://github.com/user-attachments/assets/9f904068-9b11-4575-9a93-e737b88598ce" />
 
+## $${\color{Red} \textbf{Jenkins Continuation} \ \}$$
+
+Once the instances are active and running return to Jenkinms and create a new Job 
+With Name My_project and select Pipeline
+<img width="1016" height="515" alt="image" src="https://github.com/user-attachments/assets/7e2eb2bd-e2bb-4fe3-82eb-5a7561ee95e2" />
+
+Configure as Directed 
+<img width="845" height="434" alt="image" src="https://github.com/user-attachments/assets/8d2db077-ca9f-431c-ba43-0dacc8449917" />
+
+Select Hello World and make necessary changes
+
+Click on Pipeline Syntax and Select Git 
+
+Copy The URL of the Repository from GitHub 
+````
+https://github.com/shubham93096/website
+````
+Now click on geenrate Pipeline Script 
+
+<img width="908" height="532" alt="image" src="https://github.com/user-attachments/assets/45166162-5d71-43e5-8a7b-51ccf030d7a9" />
+
+And paste the link under the steps
+Include Maven and Docker build steps as well as Maven will create the var file for Docker build coverting it to an image 
+
+<img width="413" height="238" alt="image" src="https://github.com/user-attachments/assets/4a969825-1e2a-47b1-b9a6-8a3942d67984" />
+
+The pipeline copy is below for easier navigation
+````
+pipeline {
+    agent any
+
+    stages {
+        stage('GitHub Checkout') {
+            steps {
+                git 'https://github.com/shubham93096/website.git'
+            }
+        }
+        stage('Maven Build ') {
+            steps {
+                sh 'mvn clean package'
+            }
+        }
+        stage('Docker Build') {
+            steps {
+                sh 'docker build -t myimage_$BUILD_NUMBER .'
+            }
+        }
+    }
+}
+````
