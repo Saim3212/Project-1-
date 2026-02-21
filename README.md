@@ -315,12 +315,27 @@ You may see the Stage has gone successfull
 
 <img width="326" height="100" alt="image" src="https://github.com/user-attachments/assets/1a2e0d6c-fb0b-42a1-a1a6-4624cb55d574" />
 
-> Now When the Build has been complete you will find the image has been built and pulled in your instance 
+> Now when the Build has been complete you will find the image has been built and pulled into your instance 
 ````
 docker images 
 ````
 In your EC2 instance check Docker Images and you will find your image there depending on the build number
-````
-docker images 
-````
+Once created , tag the image with the command 
 
+````
+docker tag myimage_3 sharif213/myimage_3
+````
+You should now find a Tagged image as well as the built image
+<img width="692" height="74" alt="image" src="https://github.com/user-attachments/assets/b81ca17f-aafa-4924-8323-adeb62dbce52" />
+
+Login Docker using 
+
+````
+docker login
+````
+Give in your credentials and once done push the tagged image by
+````
+docker push sharif123/myimage_3
+````
+Once pushed you will see the repository in Dockerhub
+<img width="533" height="564" alt="image" src="https://github.com/user-attachments/assets/9a9f11f6-45a2-4442-8255-3602419230a2" />
