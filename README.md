@@ -271,15 +271,28 @@ Include Maven and Docker build steps as well as Maven will create the var file f
 
 <img width="413" height="238" alt="image" src="https://github.com/user-attachments/assets/4a969825-1e2a-47b1-b9a6-8a3942d67984" />
 
+> [!IMPORTANT]
+> You need to allow permissions for maven to work correctly
+In the Instance go back to root priviledges and enter these commands to allow permissions
+````
+chmod 777 /var/run/docker.sock
+````
+````
+usermod -G 0 jenkins
+````
+````
+su - jenkins
+````
+and switch back to the user genkins 
 The pipeline copy is below for easier navigation
 ````
 pipeline {
     agent any
 
     stages {
-        stage('GitHub Checkout') {
+        stage('Github Checkout') {
             steps {
-                git 'https://github.com/shubham93096/website.git'
+                git 'https://github.com/shubham93096/myweb.git'
             }
         }
         stage('Maven Build ') {
@@ -295,3 +308,9 @@ pipeline {
     }
 }
 ````
+Now build the pipeline and click on stages 
+
+You may see the Stage has gone successfull
+
+<img width="326" height="100" alt="image" src="https://github.com/user-attachments/assets/1a2e0d6c-fb0b-42a1-a1a6-4624cb55d574" />
+
